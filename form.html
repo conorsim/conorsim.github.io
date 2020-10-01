@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <nav class="navbar navbar-expand-sm bg-dark">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="mypage_bootstrap.html" style="color:white">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color:white">Projects</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/conorsim"><img src="images/github_logo.png" alt="Github" width="40px" height="40px"></a>
+            </li>
+          </ul>
+        </nav>
+
+      </head>
+      <body>
+        <form class="" action="mypage_bootstrap.html" method="post">
+          <div class="row">
+            <div class="col-md-8 offset-md-2">
+              <h1>Add New Interest</h1>
+              <div class="form-group">
+                <label for="interestName">Interest Name</label>
+                <input type="text" class="form-control" id="interestName" placeholder="Name">
+              </div>
+              <div class="form-group">
+                <label for="interestText">Text About Interest</label>
+                <textarea rows="8" cols="80" id="interestText" class="form-control"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4 offset-md-2">
+              <div class="form-group">
+                <label for="pictureUpload">Upload Local Image:</label>
+                <input type="file" class="form-control-file" id="pictureUpload">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="numberTweets">Select # Tweets to Display</label>
+              <select class="form-control" id="numberTweets">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-8 offset-md-2">
+              <label for="interestLevel">On a scale of 1-5, how interested in this are you?</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-8 offset-md-2">
+              <div class="form-check form-check-inline">
+                <input type="radio" name="interestLevel" value="option1" id="interestLevel1" checked>
+                <label class="form-check-label" for="interestLevel1">1</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="radio" name="interestLevel" value="option1" id="interestLevel2">
+                <label class="form-check-label" for="interestLevel2">2</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="radio" name="interestLevel" value="option1" id="interestLevel3">
+                <label class="form-check-label" for="interestLevel3">3</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="radio" name="interestLevel" value="option1" id="interestLevel4">
+                <label class="form-check-label" for="interestLevel4">4</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="radio" name="interestLevel" value="option1" id="interestLevel5">
+                <label class="form-check-label" for="interestLevel5">5</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-8 offset-md-2">
+              <label for="userName">Login to Finish Submitting</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4 offset-md-2">
+              <div class="form-group">
+                <input name="test" type="text" class="form-control" id="userName" placeholder="Username">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <!-- <label for="test"></label> -->
+                <input name="test" type="password" class="form-control" id="pw" placeholder="Password">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-8 offset-md-2">
+              <button type="submit" class="btn btn-primary mb-2">Submit</button>
+            </div>
+          </div>
+
+        </form>
+      </body>
+    </html>
