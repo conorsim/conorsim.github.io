@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <comment https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp ></comment>
+  <style>
+      .row {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+    
+    .column {
+      flex: 24.2%;
+      max-width: 24.2%;
+      padding: 0 4px;
+
+    }
+    
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+      width: 100%;
+    }
+
+    .image-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+
+    .image-wrapper img {
+        max-width: 100%;
+        height: auto;
+        display: block; /* Remove space below images */
+    }
+
+    .image-tooltip {
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+        color: white;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+        display: none;
+    }
+
+    .image-wrapper:hover .image-tooltip {
+        display: block;
+    }
+    
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script src="script.js"></script>
+
+<body>
+ <div class="row">
+  <div class="column">
+  </div>
+    
+  <div class="column">
+  </div>
+
+     
+  <div class="column">
+  </div>
+   
+  <div class="column">
+  </div>
+</div> 
+
+</body>
+</html>
