@@ -10,6 +10,38 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // let gallery = document.getElementById('imageGallery');
+    // images.forEach(src => {
+    //     let img = document.createElement('img');
+    //     img.src = src;
+    //     img.addEventListener('click', function() {
+    //         openModal(src);
+    //     });
+    //     gallery.appendChild(img);
+    // });
+
+    function openModal(src) {
+        let modal = document.getElementById('myModal');
+        let modalImage = document.getElementById('modalImage');
+        modal.style.display = "block";
+        modalImage.src = src;
+    }
+
+    // Close the modal
+    let closeBtn = document.getElementsByClassName('close')[0];
+    closeBtn.onclick = function() {
+        let modal = document.getElementById('myModal');
+        modal.style.display = "none";
+    }
+
+    // Close the modal when clicking outside the image
+    window.onclick = function(event) {
+        let modal = document.getElementById('myModal');
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+
     // Process and display the data
     function processData(data) {
         // Sort data by year, placing "N/A" at the end
@@ -30,6 +62,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
             let img = document.createElement('img');
             img.src = `media/${row[0]}.jpg`; // Constructing the path using template literal
+            img.addEventListener('click', function() {
+                openModal(`media/${row[0]}.jpg`);
+            });
             imageWrapper.appendChild(img);
 
             let tooltip = document.createElement('div');
